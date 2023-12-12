@@ -51,7 +51,8 @@ Remember that the specific requirements of your video streaming application may 
 
 brew install ffmpeg
 
-curl --location 'http://localhost:3000/stream/a.mp4'
+curl --location 'http://localhost:3000/stream/a.mp4' \
+--header 'range: bytes=0-2550'
 
 curl --location 'http://localhost:3000/upload' \
 --form 'video=@"/Users/n.thapayapattanakul/Desktop/node-streaming/resource/video.mp4"' \

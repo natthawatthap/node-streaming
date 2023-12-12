@@ -1,10 +1,13 @@
 const express = require('express');
 const routes = require('./routes/routes');
 const connectDB = require('./database/mongoose'); 
+const compression = require('compression');
 
 const app = express();
 const port = 3000;
 
+// Enable Gzip compression middleware
+app.use(compression());
 app.use(express.static('public'));
 
 // Connect to the database
