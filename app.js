@@ -1,8 +1,6 @@
-// app.js
 const express = require('express');
-const mongoose = require('mongoose');
-const routes = require('./routes');
-const connectDB = require('./mongoose'); // Import the connectDB function
+const routes = require('./routes/routes');
+const connectDB = require('./database/mongoose'); 
 
 const app = express();
 const port = 3000;

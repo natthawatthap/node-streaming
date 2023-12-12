@@ -1,8 +1,7 @@
-// routes.js
 const express = require('express');
 const multer = require('multer');
 const cors = require('cors');
-const videoController = require('./controllers/videoController');
+const videoController = require('../controllers/videoController');
 
 const router = express.Router();
 const storage = multer.memoryStorage();
