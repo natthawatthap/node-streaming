@@ -1,0 +1,18 @@
+config:
+  target: 'http://localhost:3000'  # Your streaming service URL
+  phases:
+    - duration: 60
+      arrivalRate: 5
+scenarios:
+  - flow:
+      - post:
+          url: '/upload-video'
+          json:
+            videoName: 'testVideo'
+          attachments:
+            - path: 'path/to/your/test-video.mp4'
+              type: 'video/mp4'
+      - get:
+          url: '/stream/testVideo'
+          capture:
+            - json: $.headers

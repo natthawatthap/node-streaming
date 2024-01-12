@@ -1,0 +1,11 @@
+config:
+  target: "http://localhost:3000"  # Update with your server address
+  phases:
+    - duration: 300  # Test duration in seconds
+      arrivalRate: 10  # Number of new users per second
+      rampTo: 50  # Ramp up to 50 users over the specified duration
+
+scenarios:
+  - flow:
+      - get:
+          url: "/stream/your_video_name.mp4"  # Update with an existing video name

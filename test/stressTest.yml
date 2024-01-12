@@ -1,0 +1,13 @@
+config:
+  target: "http://localhost:3000" # Update with your server address
+  phases:
+    - duration: 600 # Test duration in seconds
+      arrivalRate: 100 # Number of new users per second
+
+scenarios:
+  - flow:
+      - post:
+          url: "/upload-video"
+          json:
+            videoName: "stress_test_video"
+            payload: { key: "value" }

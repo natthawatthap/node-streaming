@@ -50,6 +50,8 @@ Remember that the specific requirements of your video streaming application may 
 
 
 brew install ffmpeg
+npm install -g artillery
+
 
 curl --location 'http://localhost:3000/stream/a.mp4' \
 --header 'range: bytes=0-2550'
